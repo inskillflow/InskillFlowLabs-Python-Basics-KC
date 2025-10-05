@@ -1,5 +1,13 @@
 # Étape 0 : Préparer votre Environnement Python
 
+## Important: Suivez cette étape obligatoirement!
+
+Nous allons créer un environnement virtuel Python que vous utiliserez pour TOUS les exercices de ce lab.
+
+**À chaque nouvelle étape, vous devrez réactiver cet environnement.**
+
+---
+
 ## Qu'est-ce qu'un environnement virtuel?
 
 Imaginez que vous avez plusieurs projets Python sur votre ordinateur. Chaque projet peut avoir besoin de différentes versions de bibliothèques (packages). Un **environnement virtuel** est comme une bulle isolée pour votre projet, qui ne mélange pas les choses avec vos autres projets.
@@ -12,9 +20,37 @@ Imaginez que vous avez plusieurs projets Python sur votre ordinateur. Chaque pro
 
 Avant de commencer, vérifions que Python est bien installé.
 
-### Commande 1 : Vérifier la version de Python
+### Commande 1 : Vérifier l'environnement d'exécution
 
-Cliquez sur ce bouton pour vérifier:
+Avant de commencer, voyons sur quel système d'exploitation nous travaillons:
+
+`cat /etc/os-release`{{execute}}
+
+**Explication:** Cette commande affiche les informations sur le système Linux que vous utilisez.
+
+**RÉSULTAT ATTENDU:**
+Vous devriez voir quelque chose comme:
+```
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.3 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+```
+
+**Ce que cela signifie:**
+- Vous travaillez sur **Ubuntu Linux** version 24.04
+- C'est une version **LTS** (Long Term Support = Support à long terme)
+- Le nom de code est **Noble Numbat**
+
+**Pourquoi c'est important?** Connaître votre système aide à comprendre quelles commandes fonctionneront et comment installer des packages.
+
+---
+
+### Commande 2 : Vérifier la version de Python
+
+Maintenant, vérifions que Python est bien installé:
 
 `python3 --version`{{execute}}
 
@@ -32,7 +68,7 @@ Si vous voyez ce message, parfait! Python est installé.
 
 Maintenant, nous allons créer un environnement virtuel pour notre projet Python.
 
-### Commande 2 : Créer un dossier pour votre projet
+### Commande 3 : Créer un dossier pour votre projet
 
 D'abord, créons un dossier de travail:
 
@@ -42,17 +78,59 @@ D'abord, créons un dossier de travail:
 
 ---
 
-### Commande 3 : Aller dans ce dossier
+### Commande 4 : Aller dans ce dossier
 
 `cd mon_projet_python`{{execute}}
 
 **Explication:** Cette commande vous déplace dans le dossier que vous venez de créer
 
-**VÉRIFICATION:** Votre terminal devrait maintenant montrer que vous êtes dans `/root/mon_projet_python`
+---
+
+### Commande 3.1 : Vérifier où vous êtes
+
+Pour vérifier que vous êtes bien dans le bon dossier, exécutez:
+
+`pwd`{{execute}}
+
+**Explication:** `pwd` signifie "Print Working Directory" (afficher le répertoire de travail)
+
+**RÉSULTAT ATTENDU:**
+```
+/root/mon_projet_python
+```
+
+Si vous voyez ce chemin, parfait! Vous êtes au bon endroit.
+
+---
+
+### Commande 3.2 : Installer le package python3-venv
+
+Avant de créer un environnement virtuel, nous devons installer le package nécessaire:
+
+`apt update && apt install -y python3-venv`{{execute}}
+
+**Explication de la commande:**
+- `apt update` = met à jour la liste des packages disponibles
+- `&&` = ensuite (exécute la commande suivante)
+- `apt install -y python3-venv` = installe le package python3-venv
+- `-y` = répond automatiquement "oui" aux questions
+
+**CE QUI SE PASSE:** Le système télécharge et installe les fichiers nécessaires pour créer des environnements virtuels Python.
+
+⏱️ **Patience:** Cette commande peut prendre 30-60 secondes.
+
+**RÉSULTAT ATTENDU:**
+Vous verrez plusieurs lignes défiler, et à la fin quelque chose comme:
+```
+Setting up python3-venv ...
+Done.
+```
 
 ---
 
 ### Commande 4 : Créer l'environnement virtuel
+
+Maintenant que le package est installé, créons l'environnement virtuel:
 
 `python3 -m venv venv`{{execute}}
 
@@ -67,7 +145,7 @@ D'abord, créons un dossier de travail:
 
 ---
 
-### Commande 5 : Vérifier que l'environnement a été créé
+### Commande 8 : Vérifier que l'environnement a été créé
 
 `ls -la`{{execute}}
 
@@ -80,7 +158,7 @@ Un dossier nommé `venv` dans la liste!
 
 Maintenant que l'environnement existe, il faut l'activer (comme "allumer" un interrupteur).
 
-### Commande 6 : Activer l'environnement virtuel
+### Commande 9 : Activer l'environnement virtuel
 
 `source venv/bin/activate`{{execute}}
 
@@ -97,7 +175,7 @@ Vous devriez voir `(venv)` apparaître au début de votre ligne de commande:
 
 ## PARTIE 4 : Vérification Finale
 
-### Commande 7 : Vérifier que Python utilise bien l'environnement virtuel
+### Commande 10 : Vérifier que Python utilise bien l'environnement virtuel
 
 `which python3`{{execute}}
 
@@ -110,7 +188,7 @@ Si vous voyez le chemin avec `/venv/` dedans, c'est parfait! Python utilise main
 
 ---
 
-### Commande 8 : Vérifier pip (le gestionnaire de packages)
+### Commande 11 : Vérifier pip (le gestionnaire de packages)
 
 `which pip`{{execute}}
 
@@ -125,7 +203,7 @@ Si vous voyez le chemin avec `/venv/` dedans, c'est parfait! Python utilise main
 
 Si vous avez besoin d'installer des bibliothèques Python plus tard:
 
-### Commande 9 : Exemple d'installation de package
+### Commande 12 : Exemple d'installation de package
 
 `pip install requests`{{execute}}
 
@@ -134,7 +212,7 @@ Elle installe le package "requests" UNIQUEMENT dans votre environnement virtuel,
 
 ---
 
-### Commande 10 : Voir les packages installés
+### Commande 13 : Voir les packages installés
 
 `pip list`{{execute}}
 
@@ -162,28 +240,43 @@ Le `(venv)` va disparaître.
 
 ---
 
-## Résumé : Les 6 Commandes Essentielles
+## Résumé : Les Commandes Essentielles
 
 Voici ce que vous venez de faire, dans l'ordre:
 
 ```bash
-# Commande 1 : Vérifier Python
+# Commande 1 : Vérifier l'environnement système
+cat /etc/os-release
+
+# Commande 2 : Vérifier Python
 python3 --version
 
-# Commande 2 : Créer un dossier
+# Commande 3 : Créer un dossier
 mkdir mon_projet_python
 
-# Commande 3 : Aller dans le dossier
+# Commande 4 : Aller dans le dossier
 cd mon_projet_python
 
-# Commande 4 : Créer l'environnement virtuel
+# Commande 5 : Vérifier où vous êtes
+pwd
+
+# Commande 6 : Installer le package venv
+apt update && apt install -y python3-venv
+
+# Commande 7 : Créer l'environnement virtuel
 python3 -m venv venv
 
-# Commande 5 : Vérifier
+# Commande 8 : Vérifier la création
 ls -la
 
-# Commande 6 : Activer l'environnement
+# Commande 9 : Activer l'environnement
 source venv/bin/activate
+
+# Commande 10 : Vérifier Python dans venv
+which python3
+
+# Commande 11 : Vérifier pip
+which pip
 ```
 
 **Vous verrez `(venv)` au début de votre ligne = environnement actif!**
@@ -224,13 +317,23 @@ Le `(venv)` vous indique que l'environnement est actif!
 ### Problème 1: "command not found: python3"
 **Solution:** Python n'est pas installé. Contactez votre formateur.
 
-### Problème 2: Je ne vois pas `(venv)` après l'activation
+### Problème 2: "ensurepip is not available" ou "venv not created successfully"
+**Solution:** Le package python3-venv n'est pas installé. Exécutez:
+```bash
+apt update && apt install -y python3-venv
+```
+Puis recréez l'environnement virtuel:
+```bash
+python3 -m venv venv
+```
+
+### Problème 3: Je ne vois pas `(venv)` après l'activation
 **Solution:** Réexécutez:
 ```bash
 source venv/bin/activate
 ```
 
-### Problème 3: "Permission denied"
+### Problème 4: "Permission denied"
 **Solution:** Assurez-vous d'être dans le bon dossier avec `pwd`
 
 ---

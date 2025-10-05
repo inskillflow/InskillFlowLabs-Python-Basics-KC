@@ -1,5 +1,28 @@
 # Étape 2 : Les Types de Données en Python
 
+## IMPORTANT: Réactiver votre environnement virtuel
+
+Chaque fois que vous passez à une nouvelle étape, réactivez votre environnement virtuel.
+
+### Commande 1 : Aller dans votre dossier de projet
+
+`cd mon_projet_python`{{execute}}
+
+---
+
+### Commande 2 : Activer l'environnement virtuel
+
+`source venv/bin/activate`{{execute}}
+
+**VÉRIFICATION:**
+Assurez-vous de voir `(venv)` au début de votre ligne!
+
+```
+(venv) root@host:~/mon_projet_python#
+```
+
+---
+
 ## Qu'est-ce qu'un type de données?
 
 Imaginez que vous rangez des choses dans différentes boîtes:

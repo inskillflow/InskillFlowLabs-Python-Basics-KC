@@ -1,5 +1,30 @@
 # Étape 1 : Les Variables et l'Assignation
 
+## IMPORTANT: Activer votre environnement virtuel
+
+Avant de commencer, nous devons activer l'environnement virtuel que vous avez créé à l'Étape 0.
+
+### Commande 1 : Aller dans votre dossier de projet
+
+`cd mon_projet_python`{{execute}}
+
+---
+
+### Commande 2 : Activer l'environnement virtuel
+
+`source venv/bin/activate`{{execute}}
+
+**VÉRIFICATION IMPORTANTE:**
+Vous devez voir `(venv)` apparaître au début de votre ligne de commande:
+
+```
+(venv) root@host:~/mon_projet_python#
+```
+
+**Si vous ne voyez PAS `(venv)`:** Réexécutez la commande ci-dessus!
+
+---
+
 ## Qu'est-ce qu'une variable?
 
 Une variable est comme une **boîte avec une étiquette** où vous pouvez ranger des informations. Imaginez que vous avez plusieurs boîtes dans votre chambre, chacune avec un nom dessus : "jouets", "livres", "vêtements". En programmation, c'est pareil!

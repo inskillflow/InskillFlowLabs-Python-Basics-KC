@@ -1,146 +1,230 @@
-# Step 4: Practice Challenge
+# Étape 4 : Défi Pratique
 
-## Time to Put It All Together!
+## IMPORTANT: Réactiver votre environnement virtuel
 
-You've learned about variables, data types, and user inputs. Now let's build something real!
+Avant le défi final, assurons-nous que l'environnement virtuel est actif!
 
----
+### Commande 1 : Aller dans votre dossier de projet
 
-## Challenge: Student Information System
-
-Create a program that collects and displays student information.
-
-### Requirements:
-
-Your program should:
-
-1. **Ask for:**
-   - Student's full name (string)
-   - Student's age (integer)
-   - Student's GPA (float, 0.0 to 4.0)
-   - Whether they're enrolled (boolean - but use input as string)
-
-2. **Calculate:**
-   - What year they'll graduate (current year 2025 + 4 years - depends on implementation)
-
-3. **Display:**
-   - A nice formatted summary of all information
+`cd mon_projet_python`{{execute}}
 
 ---
 
-## Starter Template
+### Commande 2 : Activer l'environnement virtuel
 
-**Step 1:** Create your challenge file  
-`student_system.py`{{open}}
+`source venv/bin/activate`{{execute}}
 
-**Step 2:** Use this template:
+**VÉRIFICATION:**
+Vous devez voir `(venv)` au début de votre ligne!
+
+---
+
+## C'est l'heure de tout assembler!
+
+Vous avez appris les variables, les types de données et les entrées utilisateur. Maintenant, construisons quelque chose de réel!
+
+---
+
+## DÉFI : Système d'Information Étudiant
+
+Créez un programme qui collecte et affiche les informations d'un étudiant.
+
+### Ce que votre programme doit faire:
+
+**1. Demander:**
+- Le nom complet de l'étudiant (string)
+- L'âge de l'étudiant (integer)
+- La moyenne générale / GPA (float, de 0.0 à 20.0)
+
+**2. Calculer:**
+- L'année d'obtention du diplôme (année actuelle 2025 + 4 ans)
+
+**3. Afficher:**
+- Un résumé bien formaté de toutes les informations
+
+---
+
+## Template de départ
+
+### ÉTAPE 1 - Créer votre fichier de défi
+
+`systeme_etudiant.py`{{open}}
+
+---
+
+### ÉTAPE 2 - Copier ce template
+
+Copiez ce code de départ dans `systeme_etudiant.py`:
 
 ```python
-# Student Information System
-print("=== Student Registration System ===\n")
+# Système d'Information Étudiant
+print("=== SYSTÈME D'INSCRIPTION ÉTUDIANT ===\n")
 
-# TODO: Get student's full name
-
-
-# TODO: Get student's age (convert to integer!)
+# TODO: Demander le nom complet
+# Exemple: nom_complet = input("...")
 
 
-# TODO: Get student's GPA (convert to float!)
+# TODO: Demander l'âge (n'oubliez pas de convertir en integer!)
+# Exemple: age = int(input("..."))
 
 
-# TODO: Calculate graduation year (current year + 4)
+# TODO: Demander la moyenne (convertir en float!)
+# Exemple: moyenne = float(input("..."))
 
 
-# Display the information
-print("\n=== Student Profile ===")
-# TODO: Print all the information in a nice format
+# TODO: Calculer l'année de diplôme (2025 + 4)
+# Exemple: annee_diplome = ...
 
+
+# Afficher les informations
+print("\n=== PROFIL ÉTUDIANT ===")
+# TODO: Afficher le nom
+
+# TODO: Afficher l'âge
+
+# TODO: Afficher la moyenne
+
+# TODO: Afficher l'année de diplôme
+
+# TODO: Message de fin personnalisé
 ```
 
 ---
 
-## Example Output
+### ÉTAPE 3 - Complétez le code
 
-Your program should look something like this:
+Remplacez chaque `# TODO:` par le code approprié.
+
+**INDICES:**
+- Pour demander une information: `input("Votre question: ")`
+- Pour convertir en nombre: `int(...)` ou `float(...)`
+- Pour afficher: `print("Texte:", variable)`
+- Pour calculer: `resultat = 2025 + 4`
+
+---
+
+## Exemple de sortie attendue
+
+Votre programme devrait ressembler à ça:
 
 ```
-=== Student Registration System ===
+=== SYSTÈME D'INSCRIPTION ÉTUDIANT ===
 
-Enter your full name: Sarah Martinez
-Enter your age: 19
-Enter your GPA (0.0-4.0): 3.75
+Entrez votre nom complet: Sarah Martinez
+Entrez votre âge: 19
+Entrez votre moyenne (0.0-20.0): 15.75
 
-=== Student Profile ===
-Name: Sarah Martinez
-Age: 19 years old
-GPA: 3.75
-Expected Graduation: 2029
+=== PROFIL ÉTUDIANT ===
+Nom: Sarah Martinez
+Âge: 19 ans
+Moyenne: 15.75 / 20
+Diplôme prévu en: 2029
 
-Good luck with your studies, Sarah Martinez!
+Bonne chance dans vos études, Sarah Martinez!
 ```
 
 ---
 
-## Bonus Challenges
+## Testez votre programme
 
-If you finish early, try these enhancements:
+Une fois que vous avez complété le code:
 
-### Level 1: Add More Fields
-- Student ID number
-- Major/Field of study
-- Email address
+`python3 systeme_etudiant.py`{{execute}}
 
-### Level 2: Make It Pretty
-- Add decorative lines (========)
-- Use emojis
-- Color formatting (advanced!)
-
-### Level 3: Calculations
-- Calculate years until graduation
-- Calculate if GPA is above 3.5 (honor student)
-- Calculate age at graduation
+Testez avec différentes valeurs pour vous assurer que ça marche!
 
 ---
 
-## Testing Your Program
+## Défis bonus
 
-Run your program multiple times with different inputs:
+Si vous terminez rapidement, essayez ces améliorations:
 
-`python3 student_system.py`{{execute}}
+### Niveau 1: Ajouter plus de champs
+- Numéro étudiant
+- Filière d'études
+- Adresse email
 
-Make sure it works with:
-- Short and long names
-- Different ages
-- Different GPA values (try 4.0, 3.5, 2.8)
+### Niveau 2: Rendre ça joli
+- Ajouter des lignes de séparation (========)
+- Utiliser des f-strings
+- Ajouter des emojis (optionnel)
 
----
-
-## Common Issues & Solutions
-
-**Problem:** "invalid literal for int()"  
-**Solution:** Make sure you're converting to int() for age
-
-**Problem:** Numbers have too many decimals  
-**Solution:** You can use `round(number, 2)` to round to 2 decimals
-
-**Problem:** Want to format GPA to 2 decimal places?  
-**Solution:** Use `print(f"GPA: {gpa:.2f}")`
+### Niveau 3: Calculs supplémentaires
+- Calculer les années restantes jusqu'au diplôme
+- Vérifier si la moyenne est supérieure à 12 (mention)
+- Calculer l'âge au diplôme
 
 ---
 
-## Need Help?
+## Exemple de solution (N'OUBLIEZ PAS D'ESSAYER D'ABORD!)
 
-Here's a hint for the full solution structure:
+<details>
+<summary>Cliquez ici pour voir UNE solution possible</summary>
 
 ```python
-# 1. Get inputs (use input() and convert types)
-# 2. Do calculations (graduation year = 2025 + 4)
-# 3. Print formatted output (use f-strings or +)
+# Système d'Information Étudiant
+print("=== SYSTÈME D'INSCRIPTION ÉTUDIANT ===\n")
+
+# Demander les informations
+nom_complet = input("Entrez votre nom complet: ")
+age = int(input("Entrez votre âge: "))
+moyenne = float(input("Entrez votre moyenne (0.0-20.0): "))
+
+# Calculer l'année de diplôme
+annee_actuelle = 2025
+annee_diplome = annee_actuelle + 4
+
+# Afficher les informations
+print("\n=== PROFIL ÉTUDIANT ===")
+print(f"Nom: {nom_complet}")
+print(f"Âge: {age} ans")
+print(f"Moyenne: {moyenne} / 20")
+print(f"Diplôme prévu en: {annee_diplome}")
+print(f"\nBonne chance dans vos études, {nom_complet}!")
 ```
 
-Take your time and experiment! Making mistakes is part of learning.
+</details>
 
 ---
 
-When you're done (or if you're stuck), click "Continue" to see a complete solution!
+## Problèmes courants et solutions
 
+**Problème:** "invalid literal for int()"  
+**Solution:** Vous essayez de convertir du texte en nombre. Assurez-vous d'utiliser `int(input(...))` correctement.
+
+**Problème:** Les nombres ont trop de décimales  
+**Solution:** Utilisez `round(nombre, 2)` pour arrondir à 2 décimales.
+
+**Problème:** Vous voulez formater la moyenne à 2 décimales?  
+**Solution:** Utilisez `print(f"Moyenne: {moyenne:.2f}")`
+
+---
+
+## Besoin d'aide?
+
+Voici la structure de base:
+
+```python
+# 1. Obtenir les entrées (utilisez input() et convertissez les types)
+# 2. Faire les calculs (annee_diplome = 2025 + 4)
+# 3. Afficher le résultat formaté (utilisez print() ou f-strings)
+```
+
+Prenez votre temps et expérimentez! Faire des erreurs fait partie de l'apprentissage.
+
+---
+
+## Auto-évaluation
+
+Avant de passer à l'étape suivante, vérifiez que vous pouvez:
+
+- [ ] Demander des informations à l'utilisateur avec `input()`
+- [ ] Convertir du texte en nombres avec `int()` et `float()`
+- [ ] Stocker des données dans des variables
+- [ ] Faire des calculs simples
+- [ ] Afficher des résultats formatés avec `print()`
+- [ ] Comprendre les différents types de données
+
+---
+
+Quand vous êtes prêt (ou si vous êtes bloqué), cliquez sur "Continuer" pour voir la solution complète et le résumé!

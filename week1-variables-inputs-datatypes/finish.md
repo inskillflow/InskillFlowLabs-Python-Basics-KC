@@ -1,150 +1,216 @@
-# Congratulations!
+# Félicitations!
 
-## You've Completed Python Week 1!
+## IMPORTANT: Réactiver une dernière fois
 
-You've just taken your first major step into the world of Python programming!
+### Commande : Activer l'environnement virtuel
 
----
+`cd mon_projet_python && source venv/bin/activate`{{execute}}
 
-## What You've Learned
-
-### Variables & Assignment
-- How to create and name variables
-- Best practices for variable names
-- Using comments to document code
-
-### Data Types
-- **Strings** (text)
-- **Integers** (whole numbers)
-- **Floats** (decimals)
-- **Booleans** (True/False)
-- How to check types with `type()`
-
-### User Input
-- Getting input with `input()`
-- Converting strings to numbers with `int()` and `float()`
-- Creating interactive programs
-- Using f-strings for formatting
+**Vérifiez que vous voyez `(venv)`!**
 
 ---
 
-## Sample Solution
+## Vous avez terminé Python Semaine 1!
 
-Here's one way to solve the challenge:
+Vous venez de faire votre premier grand pas dans le monde de la programmation Python!
+
+---
+
+## Ce que vous avez appris
+
+### Variables & Assignation
+- Comment créer et nommer des variables
+- Bonnes pratiques pour les noms de variables
+- Utiliser les commentaires pour documenter le code
+
+### Types de Données
+- **String** (texte)
+- **Integer** (nombres entiers)
+- **Float** (nombres décimaux)
+- **Boolean** (Vrai/Faux)
+- Comment vérifier les types avec `type()`
+
+### Entrées Utilisateur
+- Obtenir des entrées avec `input()`
+- Convertir des strings en nombres avec `int()` et `float()`
+- Créer des programmes interactifs
+- Utiliser les f-strings pour formater du texte
+
+### Environnement Virtuel
+- Créer un environnement virtuel Python
+- Activer et désactiver l'environnement
+- Comprendre pourquoi c'est important
+
+---
+
+## Solution complète du défi
+
+Voici UNE façon de résoudre le défi de l'Étape 4:
 
 ```python
-# Student Information System
-print("=== Student Registration System ===\n")
+# Système d'Information Étudiant
+print("=== SYSTÈME D'INSCRIPTION ÉTUDIANT ===\n")
 
-# Get student information
-name = input("Enter your full name: ")
-age = int(input("Enter your age: "))
-gpa = float(input("Enter your GPA (0.0-4.0): "))
+# Obtenir les informations de l'étudiant
+nom_complet = input("Entrez votre nom complet: ")
+age = int(input("Entrez votre âge: "))
+moyenne = float(input("Entrez votre moyenne (0.0-20.0): "))
 
-# Calculate graduation year
-current_year = 2025
-graduation_year = current_year + 4
+# Calculer l'année de diplôme
+annee_actuelle = 2025
+annee_diplome = annee_actuelle + 4
 
-# Display the information
-print("\n=== Student Profile ===")
-print(f"Name: {name}")
-print(f"Age: {age} years old")
-print(f"GPA: {gpa:.2f}")
-print(f"Expected Graduation: {graduation_year}")
-print(f"\nGood luck with your studies, {name}!")
+# Afficher les informations
+print("\n=== PROFIL ÉTUDIANT ===")
+print(f"Nom: {nom_complet}")
+print(f"Âge: {age} ans")
+print(f"Moyenne: {moyenne:.2f} / 20")
+print(f"Diplôme prévu en: {annee_diplome}")
+print(f"\nBonne chance dans vos études, {nom_complet}!")
 ```
 
 ---
 
-## Key Concepts to Remember
+## Concepts clés à retenir
 
-1. **Variables are containers** - They store data for later use
-2. **Data types matter** - Strings vs. numbers behave differently
-3. **input() returns strings** - Always convert when you need numbers
-4. **Comments are essential** - Future you will appreciate them!
-
----
-
-## Practice Makes Perfect
-
-Before moving to Week 2, try these practice exercises:
-
-### Exercise 1: Temperature Converter
-Create a program that:
-- Asks for temperature in Celsius
-- Converts to Fahrenheit: `F = (C * 9/5) + 32`
-- Displays both temperatures
-
-### Exercise 2: Shopping Calculator
-Create a program that:
-- Asks for item name and price
-- Asks for quantity
-- Calculates total cost
-- Displays a receipt
-
-### Exercise 3: Age Calculator
-Create a program that:
-- Asks for birth year
-- Calculates current age
-- Calculates age in 10 years
-- Calculates age in dog years (age × 7)
+1. **Les variables sont des conteneurs** - Elles stockent des données pour une utilisation ultérieure
+2. **Les types de données comptent** - Les strings et les nombres se comportent différemment
+3. **input() retourne toujours des strings** - Convertissez toujours quand vous avez besoin de nombres
+4. **Les commentaires sont essentiels** - Votre futur vous vous remerciera!
+5. **L'environnement virtuel isole votre projet** - Bonne pratique professionnelle
 
 ---
 
-## Additional Resources
+## Exercices supplémentaires
 
-Want to learn more? Check these out:
+Avant de passer à la Semaine 2, essayez ces exercices:
 
-- [Python Official Documentation](https://docs.python.org/3/)
-- [W3Schools Python Tutorial](https://www.w3schools.com/python/)
-- [Real Python Tutorials](https://realpython.com/)
+### Exercice 1: Convertisseur de Température
+
+Créez un programme qui:
+- Demande une température en Celsius
+- La convertit en Fahrenheit: `F = (C * 9/5) + 32`
+- Affiche les deux températures
+
+**Exemple de sortie:**
+```
+Température en Celsius: 25
+25°C = 77.0°F
+```
+
+---
+
+### Exercice 2: Calculateur de Courses
+
+Créez un programme qui:
+- Demande le nom d'un article
+- Demande le prix unitaire
+- Demande la quantité
+- Calcule le coût total
+- Affiche un reçu
+
+**Exemple de sortie:**
+```
+=== REÇU ===
+Article: Pommes
+Prix unitaire: 2.50€
+Quantité: 5
+Total: 12.50€
+```
+
+---
+
+### Exercice 3: Calculateur d'Âge
+
+Créez un programme qui:
+- Demande l'année de naissance
+- Calcule l'âge actuel (2025 - année de naissance)
+- Calcule l'âge dans 10 ans
+- Calcule l'âge en "années de chien" (âge × 7)
+
+**Exemple de sortie:**
+```
+Année de naissance: 2000
+Âge actuel: 25 ans
+Âge dans 10 ans: 35 ans
+Âge en années de chien: 175 ans
+```
+
+---
+
+## Ressources supplémentaires
+
+Pour aller plus loin:
+
+- [Documentation Python Officielle](https://docs.python.org/fr/3/)
+- [W3Schools Python (FR)](https://www.w3schools.com/python/)
+- [Real Python Tutoriels](https://realpython.com/)
 - [Python Variables](https://www.w3schools.com/python/python_variables.asp)
-- [Python Data Types](https://www.w3schools.com/python/python_datatypes.asp)
+- [Python Types de Données](https://www.w3schools.com/python/python_datatypes.asp)
 
 ---
 
-## What's Next?
+## Prochaine étape?
 
-### Python Week 2: Conditional Statements
-Next week you'll learn:
-- If statements
-- Elif and else
-- Comparison operators
-- Logical operators (and, or, not)
-- Nested conditions
+### Python Semaine 2: Instructions Conditionnelles
 
-With conditions, your programs will make decisions!
+La semaine prochaine, vous apprendrez:
+- Les instructions If
+- Elif et else
+- Les opérateurs de comparaison (==, !=, <, >, <=, >=)
+- Les opérateurs logiques (and, or, not)
+- Les conditions imbriquées
+
+Avec les conditions, vos programmes pourront prendre des décisions!
 
 ---
 
-## Keep Your Files
+## Gardez vos fichiers
 
-Save all your Python files from today:
+Sauvegardez tous vos fichiers Python d'aujourd'hui:
 - `script.py`
-- `datatypes.py`
-- `interactive.py`
-- `student_system.py`
+- `types_donnees.py`
+- `interactif.py`
+- `systeme_etudiant.py`
 
-You might want to reference them later!
-
----
-
-## Final Tips
-
-- **Practice daily** - Even 15 minutes helps
-- **Experiment** - Try breaking your code to learn
-- **Ask questions** - No question is too simple
-- **Have fun** - Programming is creative!
+Vous pourriez vouloir les consulter plus tard!
 
 ---
 
-## Share Your Success!
+## Conseils finaux
 
-You've completed your first Python lab! Take a moment to celebrate your achievement. You're now officially a Python programmer!
-
-**Ready for more?** Continue to **Python Week 2: Conditional Statements**
+- **Pratiquez quotidiennement** - Même 15 minutes aident
+- **Expérimentez** - Essayez de casser votre code pour apprendre
+- **Posez des questions** - Aucune question n'est trop simple
+- **Amusez-vous** - La programmation est créative!
 
 ---
 
-### See you next week! Happy coding!
+## Partagez votre succès!
 
+Vous avez terminé votre premier lab Python! Prenez un moment pour célébrer cette réussite. Vous êtes officiellement un programmeur Python!
+
+**Prêt pour plus?** Continuez vers **Python Semaine 2: Instructions Conditionnelles**
+
+---
+
+### À la semaine prochaine! Bon codage!
+
+---
+
+## Commandes à retenir pour la prochaine fois
+
+```bash
+# Aller dans votre projet
+cd mon_projet_python
+
+# Activer l'environnement virtuel
+source venv/bin/activate
+
+# Vous devriez voir (venv) apparaître!
+
+# Pour désactiver quand vous avez fini
+deactivate
+```
+
+**N'oubliez pas:** Activez toujours votre environnement virtuel avant de coder!
