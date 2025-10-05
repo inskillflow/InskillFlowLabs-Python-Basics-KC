@@ -1,45 +1,44 @@
-# Welcome to Python Beginner Coding - Week 1
+# Bienvenue dans Python Semaine 1
 
-## Course Overview
+## Vue d'ensemble du cours
 
-Welcome to your Python learning journey! Over the next 6 weeks, you'll master Python fundamentals:
+Bienvenue dans votre parcours d'apprentissage Python! Durant les 6 prochaines semaines, vous allez maîtriser les fondamentaux de Python:
 
-### Week 1: Variables, Inputs & Data Types (You are here)
-### Week 2: Conditional Statements
-### Week 3: Lists
-### Week 4: Loops
-### Week 5: Functions
-### Week 6: Challenge Games
-
----
-
-## Python Week 1: Why Python?
-
-Why have we chosen Python to learn? Python's easy syntax (i.e. its readability) doesn't only make it easy to learn; it also makes Python an excellent 'gateway' language. As a highly abstract language, it is very intuitive for new learners as it allows you to focus less on the code and more on the programming concepts themselves.
-
-### Remember: Don't hesitate to ask for help!
-
-Being a programmer means knowing how to find stuff on the internet. Throughout the course we'll also be linking to [W3Schools](https://www.w3schools.com/python/) for more information.
+### Semaine 1 : Variables, Entrées & Types de Données (Vous êtes ici)
+### Semaine 2 : Instructions Conditionnelles
+### Semaine 3 : Listes
+### Semaine 4 : Boucles
+### Semaine 5 : Fonctions
+### Semaine 6 : Jeux Défi
 
 ---
 
-## What You'll Learn Today
+## Semaine 1 : Pourquoi Python?
 
-By the end of this lab, you will understand:
+Pourquoi avons-nous choisi Python pour apprendre? La syntaxe facile de Python (c'est-à-dire sa lisibilité) ne rend pas seulement l'apprentissage facile; elle fait aussi de Python un excellent langage "passerelle". En tant que langage très abstrait, il est très intuitif pour les nouveaux apprenants car il vous permet de vous concentrer moins sur le code et plus sur les concepts de programmation eux-mêmes.
 
-- How to create and use variables in Python
-- Different data types (strings, integers, floats, booleans)
-- How to get user input
-- How to use comments to document your code
+### N'hésitez pas à demander de l'aide!
+
+Être programmeur signifie savoir chercher des informations sur internet. Tout au long du cours, nous ferons également des liens vers [W3Schools](https://www.w3schools.com/python/) pour plus d'informations.
 
 ---
 
-## Your Interactive Environment
+## Ce que vous allez apprendre aujourd'hui
 
-You have three panels:
-- **Left**: Instructions (this panel)
-- **Right**: Code Editor
-- **Bottom**: Terminal for running your code
+À la fin de ce lab, vous saurez:
 
-Let's start coding! Click "Continue" below to begin.
+- Comment créer et utiliser des variables en Python
+- Les différents types de données (texte, nombres entiers, décimaux, booléens)
+- Comment obtenir des informations de l'utilisateur
+- Comment utiliser les commentaires pour documenter votre code
 
+---
+
+## Votre environnement interactif
+
+Vous avez trois panneaux:
+- **Gauche** : Instructions (ce panneau)
+- **Droite** : Éditeur de code
+- **Bas** : Terminal pour exécuter votre code
+
+Commençons à coder! Cliquez sur "Continuer" ci-dessous pour débuter.

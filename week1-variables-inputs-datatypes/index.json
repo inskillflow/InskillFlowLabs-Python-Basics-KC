@@ -1,25 +1,29 @@
 {
-  "title": "Python Week 1 - Variables, Inputs & Data Types",
-  "description": "Master the fundamentals of Python programming: variables, data types, and user inputs",
+  "title": "Python Semaine 1 - Variables, Entrées & Types de Données",
+  "description": "Maîtrisez les fondamentaux de la programmation Python: variables, types de données et entrées utilisateur",
   "details": {
     "intro": {
       "text": "intro.md"
     },
     "steps": [
       {
-        "title": "Variables and Assignment",
+        "title": "Étape 0 : Préparer l'Environnement Python",
+        "text": "step0.md"
+      },
+      {
+        "title": "Étape 1 : Variables et Assignation",
         "text": "step1.md"
       },
       {
-        "title": "Data Types in Python",
+        "title": "Étape 2 : Types de Données",
         "text": "step2.md"
       },
       {
-        "title": "User Inputs",
+        "title": "Étape 3 : Entrées Utilisateur",
         "text": "step3.md"
       },
       {
-        "title": "Practice Challenge",
+        "title": "Étape 4 : Défi Pratique",
         "text": "step4.md"
       }
     ],
